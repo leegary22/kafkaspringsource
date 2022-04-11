@@ -11,41 +11,53 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Result {
 	
-	private String name;
-	private String percentage;
-	private String result;
+	private String rcustomerName;
+	private String ridNo;
+	private String rstatus;
+	private String rdatereceived;
+	
 
 // Getter
-public String getName() {
-	return name;
+public String getRcustomerName() {
+	return rcustomerName;
   }
 
   // Setter
-  public void setName(String newName) {
-	this.name = newName;
+  public void setRcustomerName(String newRcustomerName) {
+	this.rcustomerName = newRcustomerName;
   }
 
 
 
   // Getter
-	public String getResult() {
-		return result;
+	public String getRidNo() {
+		return ridNo;
 	  }
 	
 	  // Setter
-	  public void setResult(String newResult) {
-		this.result = newResult;
+	  public void setRidNo(String newRidNo) {
+		this.ridNo = newRidNo;
 	  }
 
 
 	  // Getter
-	public String getPercentage() {
-		return percentage;
+	public String getRstatus() {
+		return rstatus;
 	  }
 	
 	  // Setter
-	  public void setPercentage(String newPercentage) {
-		this.name = newPercentage;
+	  public void setRstatus(String newRstatus) {
+		this.rstatus = newRstatus;
 	  }
 
+
+	   // Getter
+	public String getRdatereceived() {
+		return rdatereceived;
+	  }
+	
+	  // Setter
+	  public void setRdatereceived(String newRdatereceived) {
+		this.rdatereceived = newRdatereceived;
+	  }
 }

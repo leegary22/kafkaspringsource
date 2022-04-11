@@ -19,7 +19,7 @@ public class KafkaConfig {
 	private String replyTopic;
 
 	@Bean
-	public ReplyingKafkaTemplate<String, Student, Result> replyingKafkaTemplate(ProducerFactory<String, Student> pf,
+	public ReplyingKafkaTemplate<String, Customer, Result> replyingKafkaTemplate(ProducerFactory<String, Customer> pf,
 			ConcurrentKafkaListenerContainerFactory<String, Result> factory) {
 		ConcurrentMessageListenerContainer<String, Result> replyContainer = factory.createContainer(replyTopic);
 		replyContainer.getContainerProperties().setMissingTopicsFatal(false);
