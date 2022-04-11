@@ -43,6 +43,6 @@ public class Student {
 
   	// Setter
   	public void setRegistrationNumber(String newRegistrationNumber) {
-    	this.grade = newRegistrationNumber;
+    	this.registrationNumber = newRegistrationNumber;
   		}
 }

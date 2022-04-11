@@ -45,7 +45,7 @@ public String getName() {
 	
 	  // Setter
 	  public void setPercentage(String newPercentage) {
-		this.name = newPercentage;
+		this.percentage = newPercentage;
 	  }
 
 }
