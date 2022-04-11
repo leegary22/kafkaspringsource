@@ -26,7 +26,8 @@ public class KafkaController {
 	@PostMapping("/get-result")
 	public ResponseEntity<Result> getObject(@RequestBody Student student)
 			throws InterruptedException, ExecutionException {
-		ProducerRecord<String, Student> record = new ProducerRecord<>(requestTopic, null, "STD001", student);
+		//ProducerRecord<String, Student> record = new ProducerRecord<>(requestTopic, null, "STD001", student);
+		ProducerRecord<String, Student> record = new ProducerRecord<>(requestTopic, null, student.getRegistrationNumber(), student);
 		RequestReplyFuture<String, Student, Result> future = replyingKafkaTemplate.sendAndReceive(record);
 		ConsumerRecord<String, Result> response = future.get();
 		return new ResponseEntity<>(response.value(), HttpStatus.OK);
