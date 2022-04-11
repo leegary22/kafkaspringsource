@@ -21,14 +21,13 @@ public class KafkaController {
 	private String requestTopic;
 
 	@Autowired
-	private ReplyingKafkaTemplate<String, Student, Result> replyingKafkaTemplate;
+	private ReplyingKafkaTemplate<String, Customer, Result> replyingKafkaTemplate;
 
 	@PostMapping("/get-result")
-	public ResponseEntity<Result> getObject(@RequestBody Student student)
+	public ResponseEntity<Result> getObject(@RequestBody Customer customer)
 			throws InterruptedException, ExecutionException {
-		//ProducerRecord<String, Student> record = new ProducerRecord<>(requestTopic, null, "STD001", student);
-		ProducerRecord<String, Student> record = new ProducerRecord<>(requestTopic, null, student.getRegistrationNumber(), student);
-		RequestReplyFuture<String, Student, Result> future = replyingKafkaTemplate.sendAndReceive(record);
+		ProducerRecord<String, Customer> record = new ProducerRecord<>(requestTopic, null, customer.getIdNo(), customer);
+		RequestReplyFuture<String, Customer, Result> future = replyingKafkaTemplate.sendAndReceive(record);
 		ConsumerRecord<String, Result> response = future.get();
 		return new ResponseEntity<>(response.value(), HttpStatus.OK);
 	}
