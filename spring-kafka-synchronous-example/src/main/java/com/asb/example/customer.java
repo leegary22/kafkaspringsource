@@ -50,7 +50,6 @@ public class Customer {
     	this.idNo = newIdNo;
   		}
 
-
 		    // Getter
   	public String getCountryCode() {
     	return countryCode;
