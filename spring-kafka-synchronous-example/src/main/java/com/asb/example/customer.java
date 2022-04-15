@@ -87,6 +87,7 @@ public class Customer {
     	return income;
   	 	}
 
+		   
   	// Setter
   	public void setIncome(String newIncome) {
     	this.income = newIncome;
