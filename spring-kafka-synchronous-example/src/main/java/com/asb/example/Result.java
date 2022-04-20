@@ -11,53 +11,53 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Result {
 	
-	private String rcustomerName;
-	private String ridNo;
-	private String rstatus;
-	private String rdatereceived;
+	private String customerName;
+	private String idNo;
+	private String status;
+	private String dateReceived;
 	
 
 // Getter
-public String getRcustomerName() {
-	return rcustomerName;
+public String getCustomerName() {
+	return customerName;
   }
 
   // Setter
-  public void setRcustomerName(String newRcustomerName) {
-	this.rcustomerName = newRcustomerName;
+  public void setCustomerName(String newCustomerName) {
+	this.customerName = newCustomerName;
   }
 
 
 
   // Getter
-	public String getRidNo() {
-		return ridNo;
+	public String getIdNo() {
+		return idNo;
 	  }
 	
 	  // Setter
-	  public void setRidNo(String newRidNo) {
-		this.ridNo = newRidNo;
+	  public void setIdNo(String newIdNo) {
+		this.idNo = newIdNo;
 	  }
 
 
 	  // Getter
-	public String getRstatus() {
-		return rstatus;
+	public String getStatus() {
+		return status;
 	  }
 	
 	  // Setter
-	  public void setRstatus(String newRstatus) {
-		this.rstatus = newRstatus;
+	  public void setStatus(String newStatus) {
+		this.status = newStatus;
 	  }
 
 
 	   // Getter
-	public String getRdatereceived() {
-		return rdatereceived;
+	public String getDateReceived() {
+		return dateReceived;
 	  }
 	
 	  // Setter
-	  public void setRdatereceived(String newRdatereceived) {
-		this.rdatereceived = newRdatereceived;
+	  public void setDateReceived(String newDateReceived) {
+		this.dateReceived = newDateReceived;
 	  }
 }
